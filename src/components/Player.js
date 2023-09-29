@@ -1,56 +1,19 @@
 import React, { Component } from 'react'
+import {players} from '../shared/ListOfPlayer'
 export default class Player extends Component {
     render() {
         return (
             <div className='container'>
-                <div className='column'>
+                {players.map((players)=>(
+                <div className='column' key={players.id}>
                     <div className='card'>
-                        <img src='./assets/images/cr.jpg' />
-                        <h3>Cristiano Ronaldo</h3>
-                        <p className='title'>Manchester United</p>
+                        <img src={players.img} />
+                        <h3>{players.name}</h3>
+                        <p className='title'>{players.club}</p>
                         <p><button>Detail</button></p>
                     </div>
                 </div>
-                <div className='column'>
-                    <div className='card'>
-                        <img src='./assets/images/kante.jpg' />
-                        <h3>Kante</h3>
-                        <p className='title'>Cheslsea</p>
-                        <p><button>Detail</button></p>
-                    </div>
-                </div>
-                <div className='column'>
-                    <div className='card'>
-                        <img src='./assets/images/messi.jpg' />
-                        <h3>Messi</h3>
-                        <p className='title'>PSG</p>
-                        <p><button>Detail</button></p>
-                    </div>
-                </div>
-                <div className='column'>
-                    <div className='card'>
-                        <img src='./assets/images/neymar.jpg' />
-                        <h3>NeyMar</h3>
-                        <p className='title'>PSG</p>
-                        <p><button>Detail</button></p>
-                    </div>
-                </div>
-                <div className='column'>
-                    <div className='card'>
-                        <img src='./assets/images/kane.jpg' />
-                        <h3>Kane</h3>
-                        <p className='title'>Totteham</p>
-                        <p><button>Detail</button></p>
-                    </div>
-                </div>
-                <div className='column'>
-                    <div className='card'>
-                        <img src='./assets/images/haaland.jpg' />
-                        <h3>Haaland</h3>
-                        <p className='title'>Manchester United</p>
-                        <p><button>Detail</button></p>
-                    </div>
-                </div>
+                ))}
             </div>
         )
     }
