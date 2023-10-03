@@ -113,3 +113,6 @@ nav ul li:nth-child(1) .active {
   max-height: 30%;
   overflow: auto;
 }
+.switch-mode{
+  margin-top: 10px;
+}
