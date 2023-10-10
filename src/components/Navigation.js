@@ -12,7 +12,7 @@ export default function Navigation() {
                 <li><a href='#about'>Abouts</a></li>
                 <li><a href='#contact'>Contacts</a></li>
             </ul>
-            <div style={{position: 'relative'}}>
+            <div style={{position: 'left'}}>
                 <a className='switch-mode' href='#' onClick={toggle}
                 style={{
                     backgroundColor: theme.backgroundColor,
